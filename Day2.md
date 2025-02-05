@@ -31,43 +31,39 @@ unzip cloudmart-backend.zip
 ​
 Create .env file:  
 
-    ```
-    nano .env  
-    
-    ```
+```
+nano .env   
+```
 ​
 Content of .env:  
 
-    ```
-    PORT=5000  
-    AWS_REGION=us-east-1  
-    BEDROCK_AGENT_ID=<your-bedrock-agent-id>  
-    BEDROCK_AGENT_ALIAS_ID=<your-bedrock-agent-alias-id>  
-    OPENAI_API_KEY=<your-openai-api-key>  
-    OPENAI_ASSISTANT_ID=<your-openai-assistant-id>  
-    
-    ```
+```
+PORT=5000  
+AWS_REGION=us-east-1  
+BEDROCK_AGENT_ID=<your-bedrock-agent-id>  
+BEDROCK_AGENT_ALIAS_ID=<your-bedrock-agent-alias-id>  
+OPENAI_API_KEY=<your-openai-api-key>  
+OPENAI_ASSISTANT_ID=<your-openai-assistant-id>  
+```
 
 ​
 Create Dockerfile:  
 
-    ```
-    nano Dockerfile  
-    
-    ```
+```
+nano Dockerfile   
+```
 ​
 Content of Dockerfile:  
 
-    ```
-    FROM node:18
-    WORKDIR /usr/src/app
-    COPY package*.json ./
-    RUN npm install
-    COPY . .
-    EXPOSE 5000
-    CMD ["npm", "start"]
-    
-    ```
+```
+FROM node:18
+WORKDIR /usr/src/app
+COPY package*.json ./
+RUN npm install
+COPY . .
+EXPOSE 5000
+CMD ["npm", "start"] 
+```
 ​
 ### Frontend  
 Create folder and download source code:  
