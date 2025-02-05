@@ -12,9 +12,11 @@ Execute the following commands:
     sudo usermod -a -G docker $(whoami)  
     newgrp docker  
 
-​
+​    ```
     sudo usermod -a -G docker $(whoami)  
-    newgrp docker  
+    newgrp docker
+    
+    ```
 
 ### Step 2: Create Docker image for CloudMart 
 ### Backend   
