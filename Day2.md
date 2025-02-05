@@ -23,11 +23,11 @@ newgrp docker
 ### Backend   
 Create folder and download source code:  
 
-    ```
-    mkdir -p challenge-day2/backend && cd challenge-day2/backend  
-    wget https://tcb-public-events.s3.amazonaws.com/mdac/resources/day2/cloudmart-backend.zip  
-    unzip cloudmart-backend.zip  
-    ```
+```
+mkdir -p challenge-day2/backend && cd challenge-day2/backend  
+wget https://tcb-public-events.s3.amazonaws.com/mdac/resources/day2/cloudmart-backend.zip  
+unzip cloudmart-backend.zip  
+```
 ​
 Create .env file:  
 
