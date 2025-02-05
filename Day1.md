@@ -14,6 +14,7 @@
 "Please provide Terraform code to create an S3 bucket in AWS with a unique name."  
 3. Claude should generate code similar to this:  
 
+    ```
     
     provider "aws" {  
     region = "us-west-2"  # Replace with your desired    region  
@@ -36,7 +37,8 @@
     bucket = aws_s3_bucket.my_bucket.id  
     acl    = "private"  
     }  
-    
+
+    ```
     
 
 4. Save this code for use in Step 5.  
