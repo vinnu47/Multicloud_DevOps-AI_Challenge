@@ -17,11 +17,11 @@ Execute the following commands:
     
     
     
-​    ```
+​    
     sudo usermod -a -G docker $(whoami)
     newgrp docker
     
-    ``` 
+    
 
     
 ​
