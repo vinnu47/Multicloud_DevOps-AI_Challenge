@@ -1,10 +1,10 @@
 # MultiCloud, DevOps & AI Challenge - Day 1  
 
 
-    ```
+    
     Remember to use the class replay as a reference.  
 
-    ```
+    
 
 ## Streamlined Guide: Using Claude as AI Assistant to Terraform  
 
