@@ -1,5 +1,5 @@
 # MultiCloud, DevOps & AI Challenge - Day 1  
-[!TIP]  
+
 
     ```
     Remember to use the class replay as a reference.  
