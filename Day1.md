@@ -14,7 +14,7 @@
 "Please provide Terraform code to create an S3 bucket in AWS with a unique name."  
 3. Claude should generate code similar to this:  
 
-    ```
+    
     provider "aws" {  
     region = "us-west-2"  # Replace with your desired    region  
     }  
@@ -37,7 +37,7 @@
     acl    = "private"  
     }  
     
-    ```
+    
 
 4. Save this code for use in Step 5.  
   
@@ -160,6 +160,7 @@ Note: In a production environment, use a more restricted policy.
 2. Verify that your new bucket is in the list.  
 
 ## Step 7: Create the Cloud DynamoDB tables
+
     ```
     Remove the S3 lines and add the lines below to create the DynamoDB tables used by CloudMart  
     provider "aws" {
