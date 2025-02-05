@@ -15,7 +15,7 @@
 3. Claude should generate code similar to this:  
 
     ```
-    
+
     provider "aws" {  
     region = "us-west-2"  # Replace with your desired    region  
     }  
@@ -163,6 +163,7 @@ Note: In a production environment, use a more restricted policy.
 
 ## Step 7: Create the Cloud DynamoDB tables
 
+
     ```
     Remove the S3 lines and add the lines below to create the DynamoDB tables used by CloudMart  
     provider "aws" {
@@ -204,6 +205,7 @@ Note: In a production environment, use a more restricted policy.
     }
 
     ```
+    
 1. Apply the configuration:  
 
     ```
