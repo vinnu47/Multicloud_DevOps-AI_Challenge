@@ -2,6 +2,7 @@
 ## Part 1 - Docker 
 ### Step 1: Install Docker on EC2  
 Execute the following commands:  
+
     ```
     sudo yum update -y  
     sudo yum install docker -y  
@@ -12,7 +13,6 @@ Execute the following commands:
     sudo usermod -a -G docker $(whoami)  
     newgrp docker  
     ```
-  
     
     ​``` 
     sudo usermod -a -G docker $(whoami)  
