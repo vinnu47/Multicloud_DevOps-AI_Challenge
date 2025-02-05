@@ -67,26 +67,21 @@ CMD ["npm", "start"]
 ​
 ### Frontend  
 Create folder and download source code:  
+ 
 
-    ```
     cd ..
     mkdir frontend && cd frontend  
     wget https://tcb-public-events.s3.amazonaws.com/mdac/resources/day2/cloudmart-frontend.zip  
     unzip cloudmart-frontend.zip  
-
-    ​```
+    ​
 
 Create Dockerfile:  
 
-    ```
     nano Dockerfile  
-
-    ```
 ​    
 Content of Dockerfile:  
 
-    ```
-    
+
     FROM node:16-alpine as build  
     WORKDIR /app  
     COPY package*.json ./  
@@ -102,8 +97,7 @@ Content of Dockerfile:
     ENV NODE_ENV=production  
     EXPOSE 5001  
     CMD ["serve", "-s", ".", "-l", "5001"]  
-    
-    ```
+
 
 ​
 ## Part 2 - Kubernetes  
