@@ -104,7 +104,7 @@ CMD ["serve", "-s", ".", "-l", "5001"]
 ```
 
 ## Part 2 - Kubernetes  
-[!TIP]
+:bulb:
 Attention: AWS Kubernetes service is not free, so when executing the hands-on below, you will be charged a few cents on your AWS account according to EKS pricing on AWS.  
 Remember to delete the cluster to avoid unwanted charges. Use the removal section at the end of the doc.  
 
