@@ -67,39 +67,40 @@ CMD ["npm", "start"]
 ​
 ### Frontend  
 Create folder and download source code:  
- 
 
-    cd ..
-    mkdir frontend && cd frontend  
-    wget https://tcb-public-events.s3.amazonaws.com/mdac/resources/day2/cloudmart-frontend.zip  
-    unzip cloudmart-frontend.zip  
-    ​
+
+```cd ..
+mkdir frontend && cd frontend  
+wget https://tcb-public-events.s3.amazonaws.com/mdac/resources/day2/cloudmart-frontend.zip  
+unzip cloudmart-frontend.zip  
+```
 
 Create Dockerfile:  
 
-    nano Dockerfile  
-​    
+
+```nano Dockerfile  
+```
+
 Content of Dockerfile:  
 
+```
+FROM node:16-alpine as build  
+WORKDIR /app  
+COPY package*.json ./  
+RUN npm ci  
+COPY . .  
+RUN npm run build  
+  
+FROM node:16-alpine  
+WORKDIR /app  
+RUN npm install -g serve  
+COPY --from=build /app/dist /app  
+ENV PORT=5001  
+ENV NODE_ENV=production  
+EXPOSE 5001  
+CMD ["serve", "-s", ".", "-l", "5001"]  
+```
 
-    FROM node:16-alpine as build  
-    WORKDIR /app  
-    COPY package*.json ./  
-    RUN npm ci  
-    COPY . .  
-    RUN npm run build  
-    
-    FROM node:16-alpine  
-    WORKDIR /app  
-    RUN npm install -g serve  
-    COPY --from=build /app/dist /app  
-    ENV PORT=5001  
-    ENV NODE_ENV=production  
-    EXPOSE 5001  
-    CMD ["serve", "-s", ".", "-l", "5001"]  
-
-
-​
 ## Part 2 - Kubernetes  
 [!TIP]
 Attention: AWS Kubernetes service is not free, so when executing the hands-on below, you will be charged a few cents on your AWS account according to EKS pricing on AWS.  
