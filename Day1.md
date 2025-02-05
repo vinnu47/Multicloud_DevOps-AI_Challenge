@@ -165,6 +165,7 @@ Note: In a production environment, use a more restricted policy.
 
 
     ```
+    
     Remove the S3 lines and add the lines below to create the DynamoDB tables used by CloudMart  
     provider "aws" {
     region = "us-east-1"  
@@ -205,7 +206,7 @@ Note: In a production environment, use a more restricted policy.
     }
 
     ```
-    
+
 1. Apply the configuration:  
 
     ```
